@@ -1,0 +1,2 @@
+
+            print('     ' * level, root.data)
