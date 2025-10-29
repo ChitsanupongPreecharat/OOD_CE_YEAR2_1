@@ -71,7 +71,17 @@ class AVL:
             self.printTree(node.right,level+1)
             print('     '*level,node.data)
             self.printTree(node.left,level+1)
-    
+
+    def inorder(self):
+        result = []
+        self._inorder(self.root,result)
+        return result
+    def _inorder(self,root,result):
+        if root is not None:
+            self._inorder(root.left,result)
+            result.append(root.data)
+            self._inorder(root.right,result)
+
     def maxsum(self, node):
         if node is None:
             return (0, [])  
@@ -95,4 +105,6 @@ for i in Input:
 avl.printTree(avl.root)
 total,path = avl.maxsum(avl.root)
 print()
+sort = avl.inorder()
+print(f"Sort: {' '.join(str(i) for i in sort)}")
 print(f"Path with maximum sum: {' + '.join( str(i) for i in path)} = {str(total)}")

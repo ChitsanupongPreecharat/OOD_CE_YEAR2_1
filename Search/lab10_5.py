@@ -23,5 +23,4 @@ def can_partition(weight,k,capacity):
 
 weight,k = input("Enter Input : ").split('/')
 weight = list(map(int,weight.split()))
-# weight = [w*i for w,i in enumerate(weight)]
 print(f'Minimum weigth for {k} box(es) = {min_capacity(weight,int(k))}')
