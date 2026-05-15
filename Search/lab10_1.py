@@ -30,3 +30,5 @@ else:
 
     print(f"index      :   {int(index) if index == 9 or index == 2 or index == -1 else index}")
     print(f'percentile :   {int(percentile) if percentile == 100 or percentile == 0 else percentile}')
+
+
